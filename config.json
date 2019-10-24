@@ -1,0 +1,52 @@
+{
+  "name": "MyIcons",
+  "css_prefix_text": "",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "d58dc0a0927a7dea2992f615f2fbf400",
+      "css": "wallet",
+      "code": 59392,
+      "src": "linecons"
+    },
+    {
+      "uid": "79862c055035d48e5126fd4511de2059",
+      "css": "attach_money",
+      "code": 59393,
+      "src": "material"
+    },
+    {
+      "uid": "41ba324e664245317d2ef8e0e8629dea",
+      "css": "money_off",
+      "code": 59394,
+      "src": "material"
+    },
+    {
+      "uid": "b8e88705f42bd79580be828233c65da0",
+      "css": "money",
+      "code": 59395,
+      "src": "linecons"
+    },
+    {
+      "uid": "8c0ffa714cecbf5144e022d9c3df4a1f",
+      "css": "bank",
+      "code": 61852,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "3d8cc269fdad8a4cda55a20542a84e5c",
+      "css": "credit-card",
+      "code": 59396,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "4b1bfce8593a2c1c7d60b9145ada2adf",
+      "css": "cc-mastercard",
+      "code": 61937,
+      "src": "fontawesome"
+    }
+  ]
+}
