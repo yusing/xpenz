@@ -14,6 +14,7 @@ void main() async {
   addDrawerItem(iconData: MyIcons.wallet, title: 'Wallet');
   await scheduleDailyNotification();
   runApp(MyApp());
+  showNotification();
 }
 
 class MyApp extends StatelessWidget {
@@ -51,10 +52,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  _MyHomePageState() { callback = setState; }
+  _MyHomePageState() { callback = setState; context_ = context; }
   @override
   Widget build(BuildContext context) {
-    _context = context;
     return Scaffold(
       drawer: MyDrawer(),
       appBar: AppBar(title: MyAppBar()),
