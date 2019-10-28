@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:xpenz/add_event_page.dart';
 import 'package:xpenz/callback.dart';
+import 'package:xpenz/daily_notification.dart';
 import 'package:xpenz/item.dart';
 import 'my_drawer.dart';
 import 'my_icons_icons.dart';
 import 'my_appbar.dart';
+import 'daily_notification.dart';
 
 List<Item> eventItems = [];
 
-void main() {
+void main() async {
   addDrawerItem(iconData: MyIcons.wallet, title: 'Wallet');
+  await scheduleDailyNotification();
   runApp(MyApp());
+  showNotification();
 }
 
 class MyApp extends StatelessWidget {
@@ -48,7 +52,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  _MyHomePageState() { callback = setState; }
+  _MyHomePageState() { callback = setState; context_ = context; }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
