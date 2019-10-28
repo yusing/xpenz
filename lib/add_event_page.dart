@@ -9,6 +9,7 @@ import 'package:xpenz/toast.dart';
 import 'package:xpenz/wallet.dart';
 
 final List<String> walletList = ['Wallet','Bank'];
+final List<String> defaultCategories = ['Entertainment', 'Food & Drink', 'Online payment', 'Movie', 'Game', 'Shopping', 'Academic', 'Top-up'];
 int selectedRadio = 0;
 
 class AddEventPage extends StatefulWidget {
@@ -22,6 +23,7 @@ class _AddEventPageState extends State<AddEventPage> {
   var amountController = TextEditingController();
   var dateController = TextEditingController();
   var walletTypeController = TextEditingController();
+  var categoryController = TextEditingController();
 
   final formKey = GlobalKey<FormState>();
 
@@ -100,6 +102,7 @@ class _AddEventPageState extends State<AddEventPage> {
               validator: (v) => Regex.isMatch(r'\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}', v) ? null : 'Invalid value, correct format: "yyyy-MM-dd HH:mm"'
             ),
             DropDownMenu(values: walletList, leadingIcon: MyIcons.wallet, controller: walletTypeController),
+            DropDownMenu(values: defaultCategories, leadingIcon: Icons.category, controller: categoryController)
           ]
         )
       )
