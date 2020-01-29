@@ -12,14 +12,10 @@ Item _$ItemFromJson(Map<String, dynamic> json) {
       dateTime: json['dateTime'] as String,
       description: json['description'] as String,
       eventName: json['eventName'] as String,
-      walletType: json['walletType'] == null
-          ? null
-          : Wallet.fromJson(json['walletType'] as Map<String, dynamic>),
       category: json['category'] as String);
 }
 
 Map<String, dynamic> _$ItemToJson(Item instance) => <String, dynamic>{
-      'walletType': instance.walletType,
       'eventName': instance.eventName,
       'description': instance.description,
       'category': instance.category,

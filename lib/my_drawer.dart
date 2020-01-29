@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'wallet.dart';
 
-List<Wallet> walletTypes = [];
 List<IconData> walletIcons = [];
 int currentWalletIndex = 0;
 
@@ -14,13 +12,13 @@ class _MyDrawerState extends State<MyDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Column(
-        children: <Widget>[
-          Align(
-            child: ListTile(leading: Icon(Icons.filter), title: Text('Filter')),
-            alignment: Alignment.bottomCenter,
-          )
-        ],
+        child: Column(
+      children: <Widget>[
+        Align(
+          child: ListTile(leading: Icon(Icons.filter), title: Text('Filter')),
+          alignment: Alignment.bottomCenter,
+        )
+      ],
     ));
   }
 }
@@ -38,11 +36,3 @@ ListView.builder(
           },
         )
         */
-
-void addDrawerItem({IconData iconData, String title}) {
-  walletTypes.add(Wallet(
-      walletName: title,
-      typeIndex: walletTypes.length,
-      iconDataIndex: iconData == null ? -1 : walletTypes.length));
-  walletIcons.add(iconData);
-}
